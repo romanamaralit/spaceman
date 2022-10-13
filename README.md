@@ -12,12 +12,28 @@
 
 ### PseudoCode
 ```
+/*----- constants -----*/
+const startButton = start button
+const inputBox = input
+const letters = letters on the black left side
+const lettersGuessed = letters on the bottom right side
+const shipParts = 7 parts of the ship
+const buildButton = build button
+const playAgainButton = play again button
+
+/*----- event listeners -----*/
+startButton.addEventListener
+buildButton.addEventListener
+playAgainButton.addEventListener
+input just takes in values
+
+/*----- functions -----*/	
 Landing rendered page: 
 -All elements of the game, present (but spaceship is hidden but still there)
 -Start button present
 -Things not present: box to enter word to guess and play again button
 
-    -function startButton: user clicks on start button
+    -function startGame: user clicks on start button
         -function startButtonOff: button goes away
         -function enterText: user inputs a text but is crypted, press enter
             -function storeWord: word from input is stored somehow in the boxes
@@ -54,7 +70,7 @@ Landing rendered page:
             -grid for guessed letters
             -build button  
             Additional pop up:
-            -Enter word to guess box maybe input	
+            -Enter word to guess box maybe input
 ```
 
 

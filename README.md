@@ -12,11 +12,51 @@
 
 ### PseudoCode
 ```
-function changePlayerTurn(){
-  - check who is current player
-  - switch from player 1 to player 2
-  - run function for next action in game
-}
+Landing rendered page: 
+-All elements of the game, present (but spaceship is hidden but still there)
+-Start button present
+-Things not present: box to enter word to guess and play again button
+
+    -function startButton: user clicks on start button
+        -function startButtonOff: button goes away
+        -function enterText: user inputs a text but is crypted, press enter
+            -function storeWord: word from input is stored somehow in the boxes
+                -function hideLetter: letters from storeword is same green as boxes so it hides the letters
+        -function ship: all ship parts go away
+        
+    -function guessWord: user clicks on a letter on the left black side
+        -function correctLetter: 
+            -if correct, reveal letter(s) on green right side. Keep them revealed (make the letters go from green to black)
+            -else if correct and completes the word, game ends go to gameOver
+            -else, start bulding the ship
+                -function buildShip: user clicks on build
+                -function sevenClicks: the 7th click finishes the spaceship, game ends go to gameOver
+    *this function gets called again and again everytime a letter on the lext black side is clicked
+
+    -function gameOver: all 7 parts of the ship goes away including alien
+        -function ship: all ship parts go away
+        -function playAgain: play again button comes up and returns the state of the game to startButtonOff
+
+/*----- html content -----*/
+-images:
+    -galaxy image background
+        -inside this image:
+            -alien
+            -ring
+            -engine1, engine2, engine3
+            -dome
+            -threewindows
+            -antenna
+            Non images:
+            -start button
+            -play again button
+            -grid for letters
+            -grid for guessed letters
+            -build button  
+            Additional pop up:
+            -Enter word to guess box maybe input	
 ```
+
+
 
 

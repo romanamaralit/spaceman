@@ -46,10 +46,10 @@ Landing rendered page:
             -else if correct and completes the word, game ends go to gameOver
             -else, start bulding the ship
                 -function buildShip: user clicks on build
-                -function sevenClicks: the 7th click finishes the spaceship, game ends go to gameOver
+                -function sevenClicks: the 9th click finishes the spaceship, game ends go to gameOver
     *this function gets called again and again everytime a letter on the lext black side is clicked
 
-    -function gameOver: all 7 parts of the ship goes away including alien
+    -function gameOver: all 9 parts of the ship goes away including alien
         -function ship: all ship parts go away
         -function playAgain: play again button comes up and returns the state of the game to startButtonOff
 
@@ -61,7 +61,7 @@ Landing rendered page:
             -ring
             -engine1, engine2, engine3
             -dome
-            -threewindows
+            -window1, window2, window3
             -antenna
             Non images:
             -start button

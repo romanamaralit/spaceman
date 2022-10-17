@@ -1,43 +1,78 @@
+.graycontainer{
+    display: inline-block;
+}
+.grayletters{
+    display: grid;
+    height: 100px;
+    width: 100px;
+    grid-template-columns: auto auto auto auto;
+    margin: auto;
+    background: pink;
+}
+.grayletter{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 3px solid black;
+    margin: auto;
+    padding: 6px;
+}
+
 #background{
     position: absolute;
+    object-fit: cover;
 }
 
 #alien{
     position: absolute;
+    object-fit: cover;
 }
 
 #ring{
     position: absolute;
+    object-fit: cover;
 }
+
 
 #engine1{
     position: absolute;
+    object-fit: cover;
 }
 
 #engine2{
     position: absolute;
+    object-fit: cover;
 }
 
 #engine3{
     position: absolute;
+    object-fit: cover;
 }
 
 #dome{
     position: absolute;
+    object-fit: cover;
 }
 
 #window1{
     position: absolute;
+    object-fit: cover;
 }
 
 #window2{
     position: absolute;
+    object-fit: cover;
 }
 
 #window3{
     position: absolute;
+    object-fit: cover;
 }
 
 #antenna{
     position: absolute;
+    object-fit: cover;
 }

@@ -1,6 +1,6 @@
 
 body{
-    font-family: Calibri, sans-serif
+    font-family: Calibri, sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -29,10 +29,21 @@ body{
     border: 3px solid black;
     z-index: 1;
 }
-.buildbutton{
+.buildButton{
     margin: 540px 168px;
     position: absolute;
     width: 145px;
+    background-color: red;
+    color: white;
+}
+
+.startButton{
+    text-align: center;
+    margin: 150px 380px;
+    position: absolute;
+    width: 350px;
+    color: red;
+    z-index: 2;
 }
 
 #background{

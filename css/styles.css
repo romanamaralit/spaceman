@@ -1,4 +1,43 @@
-body{
-    background: pink;
-    font-size: 20px;
+#background{
+    position: absolute;
+}
+
+#alien{
+    position: absolute;
+}
+
+#ring{
+    position: absolute;
+}
+
+#engine1{
+    position: absolute;
+}
+
+#engine2{
+    position: absolute;
+}
+
+#engine3{
+    position: absolute;
+}
+
+#dome{
+    position: absolute;
+}
+
+#window1{
+    position: absolute;
+}
+
+#window2{
+    position: absolute;
+}
+
+#window3{
+    position: absolute;
+}
+
+#antenna{
+    position: absolute;
 }

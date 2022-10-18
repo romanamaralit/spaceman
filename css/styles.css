@@ -17,7 +17,10 @@ body{
     grid-template-columns: auto auto auto auto;
     margin: 20px;
 } 
-.grayletter{
+.whiteletters{
+    color: white;
+}
+.letter{
     display: flex;
     height: 75px;
     width: 65px;

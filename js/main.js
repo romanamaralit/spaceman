@@ -3,7 +3,7 @@ const startButton=document.querySelector("#wordBoxButton")
 const wordBox=document.querySelector(".wordToGuessBox")
 // const wordBox=document.querySelector(".eachLetter")
 const wordInput=document.querySelector("input")
-const letters = document.querySelectorAll(".grayletter")
+const letters = document.querySelectorAll(".letter")
 const spaceship = document.querySelectorAll(".images")
 const alien = document.querySelector("#alien")
 const ring = document.querySelector("#ring")
@@ -24,7 +24,7 @@ const buildButton = document.querySelector(".buildButton")
 // playAgainButton.addEventListener
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildButton)
-squares.forEach((letter)=>letter.addEventListener("click", letterClick))
+letters.forEach((letter)=>letter.addEventListener("click", letterClick))
 
 
 
@@ -56,16 +56,41 @@ function startGame(event) {
         console.log(wordBox)
         letterEl.classList.add("wordToGuessBoxReveal")
     })
-
-    
-
-//make query selector all to guesbox regeal. put on araray
-        // letter.classList.add("wordToGuessBoxReveal")
+}
 
 
+
+//NEW FUNCTION
+function letterClick(event){
+    const letter=event.target
+    const letterPosition = letter.dataset.index
+    letter.classList.add("whiteletters")
 }
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+// function letterClick(event){
+//     const letter=event.target
+//     const letterPosition = letter.dataset.index
+//     const word = document.createElement("wordToGuessBox")
+//     const teacherword = wordInput
+//     word.innerText=teacherword.value.toUpperCase()
+//     teacherword.value=""
+//     if(letter.innerText===word.innerText){
+//         letter.classList.add("whiteLetters")
+//     }
+// }
+
+//make query selector all to guesbox regeal. put on araray
+        // letter.classList.add("wordToGuessBoxReveal")
+

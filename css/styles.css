@@ -46,25 +46,28 @@ body{
     z-index: 2;
 }
 
-#wordToGuessBox{
+.wordToGuessBox{
     text-align: center;
     font-size: 70px;
     margin: 500px 480px;
     position: absolute;
     width: 500px;
     color: green;
+    border: 3px;
     z-index: 3;
     font-family: monospace;
     padding-left: 5px;
     letter-spacing: 12px;
 }
 
-#wordToGuessBoxReveal{
+.wordToGuessBoxReveal{
     text-align: center;
     font-size: 40px;
-    margin: 500px 380px;
-    position: absolute;
-    width: 500px;
+    /* margin: 500px 380px; */
+    position: relative;
+    background: blue;
+    margin: 30px;
+    width: 100px;
     color: red;
     z-index: 3;
 }

@@ -1,6 +1,7 @@
 //Constants
 const startButton=document.querySelector("#wordBoxButton")
-const wordBox=document.querySelector("#wordToGuessBox")
+const wordBox=document.querySelector(".wordToGuessBox")
+// const wordBox=document.querySelector(".eachLetter")
 const wordInput=document.querySelector("input")
 const letters = document.querySelectorAll(".grayletter")
 const spaceship = document.querySelectorAll(".images")
@@ -31,7 +32,7 @@ function startGame(event) {
     const word = document.createElement("wordToGuessBox")
     const teacherword = wordInput
     word.innerText=teacherword.value
-    wordBox.appendChild(word)
+    // wordBox.appendChild(word)
     teacherword.value=""
     
    // shipAway
@@ -41,12 +42,52 @@ function startGame(event) {
       })
 
     //Split letters
-    let lettersHide = word.innerText.split("")
+    // let letters = document.createElement(teacherword)
+    // console.log(letters)
 
+    let lettersHide = word.innerText.split("")
+    lettersHide.forEach(function(letter){
+        
+        const letterEl=document.createElement("span")
+        letterEl.innerText=letter
+        
+        wordBox.appendChild(letterEl)
+        console.log(wordBox)
+        letterEl.classList.add("wordToGuessBoxReveal")
+    })
+
+
+        // letter.classList.add("wordToGuessBoxReveal")
+
+
+    // let lettersHide = word.innerText.split("")
+    // const letters=document.createElement("eachLetter")
+    // const each = lettersHide
+    // letters.innerText=each.value
+    // letterBox.appendChild(letters)
+    // each.value.classList.add("wordToGuessBoxReveal")
+    
+//     lettersHide.forEach(function(letter){
+// letter.classList.add("wordToGuessBoxReveal")
+//     })
+}
+
+
+    // let lettersHide = word.innerText.split("")
+    // lettersHide.forEach(function(letter){
+    //     letter.classList.add("wordToGuessBoxReveal")
+    // })
+
+
+
+
+    // for (let i = 0; i< lettersHide.length; i++){
+    //     lettersHide[i].classlist.add("wordToGuessBoxReveal")
+    // }
 
     // lettersHide.forEach(function(letter){
     //     letter.classList.add("wordToGuessBoxReveal")
     // })
 
 
-    }
+    

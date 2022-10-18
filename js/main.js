@@ -17,7 +17,7 @@ const antenna = document.querySelector("#antenna")
 const buildButton = document.querySelector(".buildButton")
 // const playAgainButton = play again button
 
-console.log(spaceship)
+// console.log(spaceship)
 
 //Event Listeners
 // playAgainButton.addEventListener
@@ -33,13 +33,20 @@ function startGame(event) {
     word.innerText=teacherword.value
     wordBox.appendChild(word)
     teacherword.value=""
-
-   // const shipAway
+    
+   // shipAway
     let spaceshipParts = Array.from(spaceship)
-    console.log(spaceshipParts)
     spaceshipParts.forEach(function(part){
         part.classList.add("imagehide")
-
       })
+
+    //Split letters
+    let lettersHide = word.innerText.split("")
+
+
+    // lettersHide.forEach(function(letter){
+    //     letter.classList.add("wordToGuessBoxReveal")
+    // })
+
 
     }

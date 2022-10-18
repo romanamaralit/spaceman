@@ -1,7 +1,7 @@
 # Spaceman
 
 ## Background
--Game Choice: Spaceman
+Game Choice: Spaceman
     I wanted to make a game that can also be used as a digital teaching tool. Teachers can use Spaceman in their classrooms to strengthen student's skills, in this case, vocabulary skills. I have always liked Hangman but this term is culturally insensitive and is a problematic name. After researching Spaceman which is an alternative to Hangman but functions the same way, I found out that the rename of this vocabulary game was popularized by a teacher. Since then, various other teachers have used the PowerPoint presentation that he made to play this game. I wanted to use his original art to make it a web browser game to make it more efficient to play. Original images can be downloaded and found here: https://tekhnologic.wordpress.com/2017/03/01/spaceman-an-alternative-to-hangman/
 
 
@@ -31,9 +31,8 @@ input just takes in values
 
 /*----- functions -----*/	
 Landing rendered page: 
--All elements of the game, present (but spaceship is hidden but still there)
--Start button present
--Things not present: box to enter word to guess and play again button
+-All elements of the Spaceship are present
+-Start button and text box to enter word is present
 
     -function startGame: user clicks on start button
         -function enterText: user inputs a text but is crypted, press enter

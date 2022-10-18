@@ -46,6 +46,16 @@ body{
     z-index: 2;
 }
 
+#wordToGuessBox{
+    text-align: center;
+    font-size: 40px;
+    margin: 500px 380px;
+    position: absolute;
+    width: 500px;
+    color: red;
+    z-index: 3;
+}
+
 #background{
     position: absolute;
     z-index: 0;

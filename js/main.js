@@ -3,7 +3,7 @@ const startButton=document.querySelector("#wordBoxButton")
 const wordBox=document.querySelector("#wordToGuessBox")
 const wordInput=document.querySelector("input")
 const letters = document.querySelectorAll(".grayletter")
-const spaceship = document.querySelectorAll(".images")
+const spaceship = document.querySelectorAll(".imageshow")
 const alien = document.querySelector("#alien")
 const ring = document.querySelector("#ring")
 const engine1 = document.querySelector("#engine1")
@@ -27,13 +27,16 @@ buildButton.addEventListener("click", buildButton)
 
 
 //Functions
-function startGame(startGame) {
+function startGame(event) {
     const word = document.createElement("wordToGuessBox")
     const teacherword = wordInput
     word.innerText=teacherword.value
     wordBox.appendChild(word)
     teacherword.value=""
 
-   
-
+    shipAway(event.target)
+    
     }
+ function shipAway(spaceship){
+    spaceship.classList.add("imagehide")
+ }

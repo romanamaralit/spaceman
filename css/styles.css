@@ -46,6 +46,9 @@ body{
     z-index: 2;
 }
 
+.imagehide{
+display:none;
+}
 #wordToGuessBox{
     text-align: center;
     font-size: 40px;

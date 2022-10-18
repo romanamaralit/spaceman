@@ -46,9 +46,6 @@ body{
     z-index: 2;
 }
 
-.imagehide{
-display:none;
-}
 #wordToGuessBox{
     text-align: center;
     font-size: 40px;
@@ -68,38 +65,44 @@ display:none;
     position: absolute;
 }
 
-#ring{
+.ring{
     position: absolute;
 }
 
-#engine1{
+.engine1{
     position: absolute;
 }
 
-#engine2{
+.engine2{
     position: absolute;
 }
 
-#engine3{
+.engine3{
     position: absolute;
 }
 
-#dome{
+.dome{
     position: absolute;
 }
 
-#window1{
+.window1{
     position: absolute;
 }
 
-#window2{
+.window2{
     position: absolute;
 }
 
-#window3{
+.window3{
     position: absolute;
 }
 
-#antenna{
+.antenna{
     position: absolute;
 }
+.imagehide{
+    display:none;
+    }
+.imageshow{
+    display:block;
+    }

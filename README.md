@@ -36,7 +36,6 @@ Landing rendered page:
 -Things not present: box to enter word to guess and play again button
 
     -function startGame: user clicks on start button
-        -function startButtonOff: button goes away
         -function enterText: user inputs a text but is crypted, press enter
             -function storeWord: word from input is stored somehow in the boxes
                 -function hideLetter: letters from storeword is same green as boxes so it hides the letters

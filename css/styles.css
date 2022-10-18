@@ -47,14 +47,15 @@ body{
 }
 
 .wordToGuessBox{
-    text-align: center;
-    margin: 500px 515px;
+    text-align: justfiy;
+    margin: 500px 450px;
     position: relative;
-    width: 500px;
+    width: 200px;
     color: green;
     border: 3px;
     z-index: 3;
     font-family: Calibri, sans-serif;
+    
 }
 
 .wordToGuessBoxReveal{
@@ -62,7 +63,7 @@ body{
     width: 65px;
     margin: 10px;
     font-size: 40px;
-    text-align: center;
+    text-align: justify;
     font-weight: bold;
     font-family: Calibri, sans-serif;
     position: relative;

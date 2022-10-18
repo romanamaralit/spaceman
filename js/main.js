@@ -24,6 +24,7 @@ const buildButton = document.querySelector(".buildButton")
 // playAgainButton.addEventListener
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildButton)
+squares.forEach((letter)=>letter.addEventListener("click", letterClick))
 
 
 
@@ -55,6 +56,8 @@ function startGame(event) {
         console.log(wordBox)
         letterEl.classList.add("wordToGuessBoxReveal")
     })
+
+    
 
 //make query selector all to guesbox regeal. put on araray
         // letter.classList.add("wordToGuessBoxReveal")

@@ -8,12 +8,13 @@ const spaceship2 = document.querySelectorAll(".images2")
 const alien = document.querySelector("#alien")
 const buildButton = document.querySelector(".buildButton")
 const playAgainButton = document.querySelector(".byebyeAlien")
+const playAgainButton2 = document.querySelector(".byebyeAlien2")
 
 //EVENT LISTENERS
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildSpaceship)
 letters.forEach((letter)=>letter.addEventListener("click", letterClick))
-playAgainButton.addEventListener("click", resetGame)
+playAgainButton2.addEventListener("click", resetGame)
 
 //FUNCTIONS
 //Start Game Function

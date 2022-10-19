@@ -160,6 +160,11 @@ body{
     display:none;
     z-index: 4;
 }
+.byebyeAlien2{
+    position: absolute;
+    display:none;
+    z-index: 5;
+}
 .imagehide{
     display:none;
     }

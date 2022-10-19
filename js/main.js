@@ -74,26 +74,31 @@ function letterClick(event){
     }
 
 }
-
 //^COME BACK TO THIS
 
-function buildSpaceship(event){
+
+
+//Build spaceship function:
+let i=0
+function buildSpaceship(){
     let spaceshipParts2 = Array.from(spaceship2)
-    spaceshipParts2.forEach(function(part){
-        part.classList.add("imageshow")
-      })
+        spaceshipParts2[i].classList.add("imageshow")
+        i++
+        console.log(i)
       }
 
 
+//ask emily:
+//how to make these images correspond to each cluck
+
+//for the letters, how can i get word.innertext to be in global scope.
 
 
 
 
 
-
-
-
-
+//while (i <spaceshipParts2.length){
+//if(i=10, stop remove event AudioListener.)
 
 
 // function letterClick(event){
@@ -111,3 +116,7 @@ function buildSpaceship(event){
 //make query selector all to guesbox regeal. put on araray
         // letter.classList.add("wordToGuessBoxReveal")
 
+
+
+        //make a div that says you lose or you win and then if i want, display something. 
+        //if you lose

@@ -17,7 +17,7 @@ const window2 = document.querySelector("#window2")
 const window3 = document.querySelector("#window3")
 const antenna = document.querySelector("#antenna")
 const buildButton = document.querySelector(".buildButton")
-// const playAgainButton = play again button
+const playAgainButton = document.querySelector(".byebyeAlien")
 
 // console.log(spaceship)
 
@@ -26,6 +26,7 @@ const buildButton = document.querySelector(".buildButton")
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildSpaceship)
 letters.forEach((letter)=>letter.addEventListener("click", letterClick))
+playAgainButton.addEventListener("click", resetGame)
 
 
 
@@ -88,6 +89,10 @@ function buildSpaceship(){
       }
 
 
+//Reset Game function
+function resetGame(){
+    location.reload()
+}
 //ask emily:
 //how to make these images correspond to each cluck
 

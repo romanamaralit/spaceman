@@ -1,91 +1,62 @@
-//Constants
+//CONSTANTS
 const startButton=document.querySelector("#wordBoxButton")
 const wordBox=document.querySelector(".wordToGuessBox")
-// const wordBox=document.querySelector(".eachLetter")
 const wordInput=document.querySelector("input")
 const letters = document.querySelectorAll(".letter")
 const spaceship = document.querySelectorAll(".images")
 const spaceship2 = document.querySelectorAll(".images2")
 const alien = document.querySelector("#alien")
-const ring = document.querySelector("#ring")
-const engine1 = document.querySelector("#engine1")
-const engine2 = document.querySelector("#engine2")
-const engine3 = document.querySelector("#engine")
-const dome = document.querySelector("#dome")
-const window1 = document.querySelector("#window1")
-const window2 = document.querySelector("#window2")
-const window3 = document.querySelector("#window3")
-const antenna = document.querySelector("#antenna")
 const buildButton = document.querySelector(".buildButton")
 const playAgainButton = document.querySelector(".byebyeAlien")
 
-// console.log(spaceship)
-
-//Event Listeners
-// playAgainButton.addEventListener
+//EVENT LISTENERS
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildSpaceship)
 letters.forEach((letter)=>letter.addEventListener("click", letterClick))
 playAgainButton.addEventListener("click", resetGame)
 
-
-
-//Functions
+//FUNCTIONS
+//Start Game Function
 function startGame(event) {
+    //Input word to guess:
     const word = document.createElement("wordToGuessBox")
     const teacherword = wordInput
     word.innerText=teacherword.value.toUpperCase()
-    // wordBox.appendChild(word)
     teacherword.value=""
     
-   // shipAway
+   //Make spaceship disappear:
     let spaceshipParts = Array.from(spaceship)
     spaceshipParts.forEach(function(part){
         part.classList.add("imagehide")
       })
 
-    //Split letters
-    // let letters = document.createElement(teacherword)
-    // console.log(letters)
-
+    //Split word to guess into individual boxes:
     let lettersHide = word.innerText.split("")
     lettersHide.forEach(function(letter){
-        
         const letterEl=document.createElement("span")
         letterEl.innerText=letter
-        
         wordBox.appendChild(letterEl)
-        // console.log(wordBox)
         letterEl.classList.add("wordToGuessBoxHide")
     })
 }
 
-
-
-//Check letter function
+//Click on letters to make a guess function:
 function letterClick(event){
-    const letterEls = document.querySelectorAll('.wordToGuessBox > span')
-    console.log(letterEls)
+    //Compare letter clicked to word to guess letters:
     const letter=event.target
-    console.log(event.target)
-for(var n=0; n<letterEls.length; n++){
-    if (letterEls===letter){
-    letterEls.classlist.add('wordToGuessBoxReveal')
+    const letterclicked=letter.dataset.index
+    const letterEls = document.querySelectorAll('.wordToGuessBox > span')
+    for(var n=0; n<letterEls.length; n++){
+    if (letterEls[n].innerText===letterclicked){
+    letterEls[n].classList.add('wordToGuessBoxReveal')
 }
     
-//loop through entire array
-
+    //Make letters click turn white:
     letter.classList.add("whiteletters")
-    if(letter===wordBox){
-        letter.classList.add("wordToGuessBoxReveal")
-    }
 }
 }
-//^COME BACK TO THIS
 
-
-
-//Build spaceship function:
+//Make spaceship parts appear one by one:
 let i=0
 function buildSpaceship(){
     let spaceshipParts2 = Array.from(spaceship2)
@@ -93,40 +64,9 @@ function buildSpaceship(){
         i++
       }
 
-
-//Reset Game function
+//Reset the game:
 function resetGame(){
     location.reload()
 }
-//ask emily:
-//how to make these images correspond to each cluck
-
-//for the letters, how can i get word.innertext to be in global scope.
 
 
-
-
-
-//while (i <spaceshipParts2.length){
-//if(i=10, stop remove event AudioListener.)
-
-
-// function letterClick(event){
-//     const letter=event.target
-//     const letterPosition = letter.dataset.index
-//     const word = document.createElement("wordToGuessBox")
-//     const teacherword = wordInput
-//     word.innerText=teacherword.value.toUpperCase()
-//     teacherword.value=""
-//     if(letter.innerText===word.innerText){
-//         letter.classList.add("whiteLetters")
-//     }
-// }
-
-//make query selector all to guesbox regeal. put on araray
-        // letter.classList.add("wordToGuessBoxReveal")
-
-
-
-        //make a div that says you lose or you win and then if i want, display something. 
-        //if you lose

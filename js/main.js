@@ -55,20 +55,19 @@ function startGame(event) {
         letterEl.innerText=letter
         
         wordBox.appendChild(letterEl)
-        console.log(wordBox)
+        // console.log(wordBox)
         letterEl.classList.add("wordToGuessBoxHide")
     })
-    return word.innerText
 }
 
 
 
-//NEW FUNCTION
+//Check letter function
 function letterClick(event){
     const letter=event.target
     const letterPosition = letter.dataset.index
     letter.classList.add("whiteletters")
-    console.log(letter)
+    console.log(wordBox)
 
     if(letter===wordBox){
         letter.classList.add("wordToGuessBoxReveal")

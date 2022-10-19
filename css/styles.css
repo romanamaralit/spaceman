@@ -47,8 +47,29 @@ body{
     width: 350px;
     color: red;
     z-index: 2;
+    font-weight: bold;
 }
-
+.enter{
+    font-size: 25px;
+    margin: 150px 350px;
+    font-family: Krungthep;
+}
+.passcode{
+    padding: 5px;
+    width: 250px;
+    margin: 150px 400px;
+    font-size: 28px;
+    color: green
+}
+#wordBoxButton{
+    margin: 170px 478px;
+    padding: 6px;
+    width: 95px;
+    font-size: 28px;
+    color: gray;
+    border-radius: 10px;
+    font-family: Krungthep;
+}
 .wordToGuessBox{
     text-align: justfiy;
     margin: 500px 400px;
@@ -58,7 +79,6 @@ body{
     border: 3px;
     z-index: 3;
     font-family: Calibri, sans-serif;
-    
 }
 
 .wordToGuessBoxHide{

@@ -64,14 +64,22 @@ function startGame(event) {
 
 //Check letter function
 function letterClick(event){
+    const letterEls = document.querySelectorAll('.wordToGuessBox > span')
+    console.log(letterEls)
     const letter=event.target
-    const letterPosition = letter.dataset.index
-    letter.classList.add("whiteletters")
+    console.log(event.target)
+for(var n=0; n<letterEls.length; n++){
+    if (letterEls===letter){
+    letterEls.classlist.add('wordToGuessBoxReveal')
+}
+    
+//loop through entire array
 
+    letter.classList.add("whiteletters")
     if(letter===wordBox){
         letter.classList.add("wordToGuessBoxReveal")
     }
-
+}
 }
 //^COME BACK TO THIS
 
@@ -83,7 +91,6 @@ function buildSpaceship(){
     let spaceshipParts2 = Array.from(spaceship2)
         spaceshipParts2[i].classList.add("imageshow")
         i++
-        console.log(i)
       }
 
 

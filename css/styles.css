@@ -51,7 +51,7 @@ body{
 
 .wordToGuessBox{
     text-align: justfiy;
-    margin: 500px 450px;
+    margin: 500px 400px;
     position: relative;
     width: 200px;
     color: green;
@@ -132,6 +132,11 @@ body{
 .antenna{
     position: absolute;
     display:block;
+}
+.byebyeAlien{
+    position: absolute;
+    display:none;
+    z-index: 4
 }
 .imagehide{
     display:none;

@@ -67,7 +67,6 @@ function letterClick(event){
     const letter=event.target
     const letterPosition = letter.dataset.index
     letter.classList.add("whiteletters")
-    console.log(wordBox)
 
     if(letter===wordBox){
         letter.classList.add("wordToGuessBoxReveal")

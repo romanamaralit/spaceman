@@ -56,13 +56,13 @@ body{
 }
 .passcode{
     padding: 5px;
-    width: 250px;
-    margin: 150px 400px;
+    width: 220px;
+    margin: 150px 415px;
     font-size: 28px;
     color: green
 }
 #wordBoxButton{
-    margin: 170px 478px;
+    margin: 170px 480px;
     padding: 6px;
     width: 95px;
     font-size: 28px;

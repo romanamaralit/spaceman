@@ -5,6 +5,7 @@ const wordBox=document.querySelector(".wordToGuessBox")
 const wordInput=document.querySelector("input")
 const letters = document.querySelectorAll(".letter")
 const spaceship = document.querySelectorAll(".images")
+const spaceship2 = document.querySelectorAll(".images2")
 const alien = document.querySelector("#alien")
 const ring = document.querySelector("#ring")
 const engine1 = document.querySelector("#engine1")
@@ -23,7 +24,7 @@ const buildButton = document.querySelector(".buildButton")
 //Event Listeners
 // playAgainButton.addEventListener
 startButton.addEventListener("click", startGame)
-buildButton.addEventListener("click", buildButton)
+buildButton.addEventListener("click", buildSpaceship)
 letters.forEach((letter)=>letter.addEventListener("click", letterClick))
 
 
@@ -54,8 +55,9 @@ function startGame(event) {
         
         wordBox.appendChild(letterEl)
         console.log(wordBox)
-        letterEl.classList.add("wordToGuessBoxReveal")
+        letterEl.classList.add("wordToGuessBoxHide")
     })
+    return word.innerText
 }
 
 
@@ -65,7 +67,22 @@ function letterClick(event){
     const letter=event.target
     const letterPosition = letter.dataset.index
     letter.classList.add("whiteletters")
+    console.log(letter)
+
+    if(letter===wordBox){
+        letter.classList.add("wordToGuessBoxReveal")
+    }
+
 }
+
+//^COME BACK TO THIS
+
+function buildSpaceship(event){
+    let spaceshipParts2 = Array.from(spaceship2)
+    spaceshipParts2.forEach(function(part){
+        part.classList.add("imageshow")
+      })
+      }
 
 
 

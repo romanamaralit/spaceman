@@ -136,7 +136,7 @@ body{
 .byebyeAlien{
     position: absolute;
     display:none;
-    z-index: 4
+    z-index: 4;
 }
 .imagehide{
     display:none;

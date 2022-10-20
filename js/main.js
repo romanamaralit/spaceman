@@ -23,7 +23,7 @@ function startGame(event) {
     const teacherword = wordInput
     word.innerText = teacherword.value.toUpperCase()
     teacherword.value = ""
-    wordsTyped.push(word.innerText.split(""))
+    wordsTyped = word.innerText.split("")
     //Make spaceship disappear:
     let spaceshipParts = Array.from(spaceship)
     spaceshipParts.forEach(function (part) {
@@ -53,9 +53,8 @@ function letterClick(event) {
             lettersclicked.push(letterEls[n].innerText)
             console.log(lettersclicked)
             console.log(wordsTyped)
-        if (wordsTyped==lettersclicked){
-            console.log("great job Mikee")
-        }
+            
+            console.log(lettersclicked.length==wordsTyped.length)
         }
         //Make letters click turn white:
         letter.classList.add("whiteletters")

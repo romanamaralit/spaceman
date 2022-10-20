@@ -6,6 +6,17 @@ body {
     box-sizing: border-box;
 }
 
+.winner{
+display: none;
+position: absolute;
+
+}
+
+.winnerShow{
+    display: block;
+    position: absolute;
+}
+
 .graycontainer {
     position: absolute;
     display: inline-block;

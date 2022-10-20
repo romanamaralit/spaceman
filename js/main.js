@@ -8,11 +8,13 @@ const spaceship2 = document.querySelectorAll(".images2")
 const alien = document.querySelector("#alien")
 const buildButton = document.querySelector(".buildButton")
 const playAgainButton = document.querySelector(".byebyeAlien")
+const winningImage = document.querySelector(".winner")
 //EVENT LISTENERS
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildSpaceship)
 letters.forEach((letter) => letter.addEventListener("click", letterClick))
 playAgainButton.addEventListener("click", resetGame)
+winningImage.addEventListener("click", resetGame)
 
 //FUNCTIONS
 //Start Game Function
@@ -54,7 +56,9 @@ function letterClick(event) {
             console.log(lettersclicked)
             console.log(wordsTyped)
             
-            console.log(lettersclicked.length==wordsTyped.length)
+        if(lettersclicked.length==wordsTyped.length===true){
+            winningImage.classList.add("winnerShow")
+        }
         }
         //Make letters click turn white:
         letter.classList.add("whiteletters")

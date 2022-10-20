@@ -8,7 +8,6 @@ const spaceship2 = document.querySelectorAll(".images2")
 const alien = document.querySelector("#alien")
 const buildButton = document.querySelector(".buildButton")
 const playAgainButton = document.querySelector(".byebyeAlien")
-
 //EVENT LISTENERS
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildSpaceship)
@@ -17,13 +16,14 @@ playAgainButton.addEventListener("click", resetGame)
 
 //FUNCTIONS
 //Start Game Function
+let wordsTyped=[]
 function startGame(event) {
     //Input word to guess:
     const word = document.createElement("wordToGuessBox")
     const teacherword = wordInput
     word.innerText = teacherword.value.toUpperCase()
     teacherword.value = ""
-
+    wordsTyped.push(word.innerText.split(""))
     //Make spaceship disappear:
     let spaceshipParts = Array.from(spaceship)
     spaceshipParts.forEach(function (part) {
@@ -41,6 +41,7 @@ function startGame(event) {
 }
 
 //Click on letters to make a guess function:
+let lettersclicked=[]
 function letterClick(event) {
     //Compare letter clicked to word to guess letters:
     const letter = event.target
@@ -49,6 +50,12 @@ function letterClick(event) {
     for (var n = 0; n < letterEls.length; n++) {
         if (letterEls[n].innerText === letterclicked) {
             letterEls[n].classList.add('wordToGuessBoxReveal')
+            lettersclicked.push(letterEls[n].innerText)
+            console.log(lettersclicked)
+            console.log(wordsTyped)
+        if (wordsTyped==lettersclicked){
+            console.log("great job Mikee")
+        }
         }
         //Make letters click turn white:
         letter.classList.add("whiteletters")
@@ -67,5 +74,3 @@ function buildSpaceship() {
 function resetGame() {
     location.reload()
 }
-
-

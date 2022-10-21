@@ -7,31 +7,31 @@ const spaceship = document.querySelectorAll(".images")
 const spaceship2 = document.querySelectorAll(".images2")
 const alien = document.querySelector("#alien")
 const buildButton = document.querySelector(".buildButton")
-const playAgainButton = document.querySelector(".byebyeAlien")
-const winningImage = document.querySelector(".winner")
+const loseButton = document.querySelector(".byebyeAlien")
+const winButton = document.querySelector(".winner")
+
 //EVENT LISTENERS
 startButton.addEventListener("click", startGame)
 buildButton.addEventListener("click", buildSpaceship)
 letters.forEach((letter) => letter.addEventListener("click", letterClick))
-playAgainButton.addEventListener("click", resetGame)
-winningImage.addEventListener("click", resetGame)
+loseButton.addEventListener("click", resetGame)
+winButton.addEventListener("click", resetGame)
 
 //FUNCTIONS
-//Start Game Function
-let wordsTyped=[]
+//Function: Starts the game
+let wordsEntered = []
 function startGame(event) {
     //Input word to guess:
     const word = document.createElement("wordToGuessBox")
     const teacherword = wordInput
     word.innerText = teacherword.value.toUpperCase()
     teacherword.value = ""
-    wordsTyped = word.innerText.split("")
+    wordsEntered = word.innerText.split("")
     //Make spaceship disappear:
     let spaceshipParts = Array.from(spaceship)
     spaceshipParts.forEach(function (part) {
         part.classList.add("imagehide")
     })
-
     //Split word to guess into individual boxes:
     let lettersHide = word.innerText.split("")
     lettersHide.forEach(function (letter) {
@@ -42,8 +42,8 @@ function startGame(event) {
     })
 }
 
-//Click on letters to make a guess function:
-let lettersclicked=[]
+//Function: Clicks on letters to make a guess and compare it to word input
+let lettersclicked = []
 function letterClick(event) {
     //Compare letter clicked to word to guess letters:
     const letter = event.target
@@ -53,19 +53,16 @@ function letterClick(event) {
         if (letterEls[n].innerText === letterclicked) {
             letterEls[n].classList.add('wordToGuessBoxReveal')
             lettersclicked.push(letterEls[n].innerText)
-            console.log(lettersclicked)
-            console.log(wordsTyped)
-            
-        if(lettersclicked.length==wordsTyped.length===true){
-            winningImage.classList.add("winnerShow")
+            if (lettersclicked.length == wordsEntered.length === true) {
+                winButton.classList.add("winnerShow")
+            }
         }
-        }
-        //Make letters click turn white:
+        //Make letters clicked turn white:
         letter.classList.add("whiteletters")
     }
 }
 
-//Make spaceship parts appear one by one:
+//Function: make spaceship parts appear one by one:
 let i = 0
 function buildSpaceship() {
     let spaceshipParts2 = Array.from(spaceship2)
@@ -73,7 +70,7 @@ function buildSpaceship() {
     i++
 }
 
-//Reset the game:
+//Function: reset the game:
 function resetGame() {
     location.reload()
 }

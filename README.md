@@ -7,8 +7,8 @@
 ## Wireframe & Screenshot of Game
 ![a drawing of a game with an alien and a spaceship and letters to choose from ](images/wireframe1.jpg)
 ![](images/wireframe2.jpg)
-![a screenshot of the actual game where the user can enter a word that another user can guess](images/gamescreenshot1.jpg)
-![](images/gamescreenshot2.jpg)
+![a screenshot of the actual game where the user can enter a word that another user can guess](images/gamescreenshot1.png)
+![](images/gamescreenshot2.png)
 
 ### Technologies Used
 -JavaScript
